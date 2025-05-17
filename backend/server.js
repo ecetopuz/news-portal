@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const sqlite3 = require('sqlite3');
 const cors = require('cors');
@@ -9,17 +10,18 @@ app.use(cors({
   origin: 'http://localhost:3000'
 }));
 
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Server is running on port ${port}`);
-});
+const dbPath = path.resolve(__dirname, 'data.db');
 
-// database connection
-const db = new sqlite3.Database('C:/Users/User/Desktop/news-portal/backend/data.db', (err) => {
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error("Veritabanı bağlantısı başarısız:", err.message);
   } else {
-    console.log('Veritabanı bağlantısı başarılı');
+    console.log('Veritabanı bağlantısı başarılı:', dbPath);
   }
+});
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 // Finance data
