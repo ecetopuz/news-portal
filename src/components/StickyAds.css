@@ -3,12 +3,13 @@
   top: 10%;
   width: 120px;
   height: 500px;
-  z-index: 900;
+  z-index: 9999; /* Z-index artırıldı */
   border: 1px solid #ccc;
   background-color: #f8f8f8;
   display: flex;
   justify-content: center;
-   overflow: hidden;
+  overflow: hidden;
+  outline: 2px solid red; /* Geçici olarak görünürlük testi için eklendi */
 }
 
 .left-ad {
@@ -43,17 +44,14 @@
   background: #d00;
 }
 
-/* Mobil cihazlarda reklamlar gizlenir */
-@media screen and (max-width: 768px) {
-  .sticky-ad {
-    display: none;
-  }
-}
+/* Sadece ekran genişliği 992px'den küçükse reklamları gizle */
 @media screen and (max-width: 992px) {
   .sticky-ad {
     display: none;
   }
 }
+
+/* İsteğe bağlı: içerik için boşluk */
 @media screen and (min-width: 1200px) {
   .main-content {
     margin-left: 170px; 
