@@ -3,11 +3,15 @@ const sqlite3 = require('sqlite3');
 const cors = require('cors');
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors({
   origin: 'http://localhost:3000'
 }));
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
+});
 
 // database connection
 const db = new sqlite3.Database('C:/Users/User/Desktop/news-portal/backend/data.db', (err) => {
