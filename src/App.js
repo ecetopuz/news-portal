@@ -8,15 +8,15 @@ import NewsPanelCard from './components/NewsPanelCard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-
 function App() {
   const [weatherData, setWeatherData] = useState([]);
+  const BASE_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/weather-data')
+    fetch(`${BASE_URL}/api/weather-data`)
       .then(res => res.json())
       .then(data => setWeatherData(data.data));
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <div className="container-fluid p-0">
@@ -30,12 +30,11 @@ function App() {
         </div>
 
         <div className="col-md-7 slider-col">
-           <SliderNews />
+          <SliderNews />
         </div>
 
-        
-        {/* Haber merkezi ve hava durumu  */}
-        <div className="col-md-3 d-flex flex-column gap-3  mt-4">
+        {/* Haber merkezi ve hava durumu */}
+        <div className="col-md-3 d-flex flex-column gap-3 mt-4">
           <NewsPanelCard />
           <Weather data={weatherData} />
         </div>

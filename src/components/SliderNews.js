@@ -7,13 +7,13 @@ const SliderNews = () => {
   const [sliderNews, setSliderNews] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const dispatch = useDispatch();
+const BASE_URL = process.env.REACT_APP_API_URL;
 
-  useEffect(() => {
-    fetch('http://localhost:5000/api/slider-news')
-      .then(res => res.json())
-      .then(data => setSliderNews(data.data))
-      .catch(err => console.error("Slider news fetch error:", err));
-  }, []);
+useEffect(() => {
+  fetch(`${BASE_URL}/api/slider-news`)
+    .then(res => res.json())
+    .then(data => setSliderNews(data.data));
+}, [BASE_URL]);
 
   useEffect(() => {
     const carousel = document.getElementById('newsCarousel');

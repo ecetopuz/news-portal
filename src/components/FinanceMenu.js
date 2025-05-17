@@ -4,12 +4,14 @@ import './FinanceMenu.css';
 const FinanceMenu = () => {
   const [financeItems, setFinanceItems] = useState([]);
 
+  const BASE_URL = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
-    fetch('http://localhost:5000/api/finance-menu')
+    fetch(`${BASE_URL}/api/finance-menu`)
       .then(res => res.json())
-      .then(data => setFinanceItems(data.data))
+      .then(data => setFinanceItems(data.data))  // burayı düzelttim
       .catch(err => console.error('Finance data error:', err));
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <div className="finance-bar">
