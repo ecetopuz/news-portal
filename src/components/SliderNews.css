@@ -1,0 +1,39 @@
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carousel {
+  max-width: 800px; 
+  margin: 0 auto;    
+}
+
+.carousel-item img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slide-indicator {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
