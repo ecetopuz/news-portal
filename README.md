@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+News Portal Project
+Project Overview
+This project is a news portal web application developed using React for the frontend. The backend is built with Node.js and the Express framework, using SQLite as the database.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technologies Used
+Frontend: React, Redux (for state management), Bootstrap, CSS
 
-## Available Scripts
+Backend: Node.js, Express.js
 
-In the project directory, you can run:
+Database: SQLite (for persistent data storage)
 
-### `npm start`
+Hosting: Render.com (free hosting with Node.js support)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project Features
+Sticky Ads: Two sticky ads appear on the left and right sides of the page. They can be closed by clicking the close button.
+Sticky Responsive Menu: A top menu with static links, with two menu items having 3 submenus each. 
+The Finance menu is fetched from the backend API.
+News Slider: 10 news headlines are shown in a slider. Slider news data is retrieved from the backend API. Each news item links to its own page.
+Weather Data: Shows 5-day weather data fetched from the backend API.
+History: The last 10 news headlines visited by the user are stored and displayed using Redux.
+Responsive Design: All pages are responsive and work on different devices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Setup and Running
+Backend
+Navigate to the backend folder:
+cd backend  
 
-### `npm test`
+Install dependencies:
+npm install  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the backend server:
+npm start  
 
-### `npm run build`
+Frontend (news-portal)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies:
+npm install  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the React app:
+npm start  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Notes
+The backend API retrieves all data from the SQLite database; no in-memory data is used.
 
-### `npm run eject`
+The Finance menu. Weather data and Slider news are dynamically fetched from the backend.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The project is deployed on Render.com.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ads can be easily closed to improve user experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Live Site
+https://news-frontend-z9qr.onrender.com/
 
-## Learn More
+GitHub Repository
+https://github.com/ecetopuz/news-portal
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
