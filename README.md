@@ -39,7 +39,22 @@ Finance menu, weather data, and slider news are dynamically fetched from the bac
 Ads can be easily closed to improve user experience.
 
 The project is deployed on Render.com.
+> ⚠️ Please note that the backend is hosted on [render.com](https://render.com). If the server has been inactive for more than 15 minutes, it might take a short while to wake up and respond to requests.
 
 🔗 Live Site & Source Code
 Live Site: https://news-frontend-z9qr.onrender.com/
 GitHub Repository: https://github.com/ecetopuz/news-portal
+
+## Screenshots
+
+### Screenshot 1
+![Screenshot 1](assignment_screenshots/Assignment1.png)
+
+### Screenshot 2
+![Screenshot 2](assignment_screenshots/Assignment2.png)
+
+### Screenshot 3
+![Screenshot 3](assignment_screenshots/Assignment3.png)
+
+### Screenshot 4
+![Screenshot 4](assignment_screenshots/Assignment4.png)
